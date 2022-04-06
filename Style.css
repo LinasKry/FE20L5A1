@@ -1,0 +1,120 @@
+body {
+  background: rgb(145, 166, 175);
+}
+
+.fonas {
+  width: 800px;
+  height: 800px;
+  border: 3px solid black;
+  margin: auto;
+  animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: rgb(116, 124, 124);
+  }
+  35% {
+    background-color: rgb(78, 124, 124);
+  }
+  50% {
+    background-color: rgb(38, 67, 110);
+  }
+  65% {
+    background-color: rgb(78, 124, 124);
+  }
+  100% {
+    background-color: rgb(116, 124, 124);
+  }
+}
+
+.ball {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  background: rgb(247, 4, 4);
+  margin: 137px auto;
+  transition-duration: 2s;
+  text-align: center;
+  font-style: italic;
+  font-size: 40px;
+  line-height: 200px;
+}
+.ball:hover {
+  transform: scale(0.3);
+  background-color: rgb(43, 175, 3);
+}
+.cube {
+  width: 150px;
+  height: 150px;
+  background: rgb(21, 67, 119);
+  border: 5px solid purple;
+  animation: bouncing 3s linear infinite alternate;
+}
+@keyframes bouncing {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translatey(640px) translateX(640px);
+  }
+  0% {
+    border-radius: 0px;
+    background: goldenrod;
+  }
+  50% {
+    border-radius: 75px;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+.track {
+  width: 800px;
+  height: 200px;
+  border-bottom: 7px solid green;
+  margin: auto;
+}
+
+.flip {
+  width: 100px;
+  height: 100px;
+  padding-top: 105px;
+  animation: move 5s linear infinite alternate;
+}
+.dog {
+  width: 100px;
+  height: 100px;
+  transition-duration: 1s;
+  animation: flip 10s linear infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(700px);
+  }
+}
+
+@keyframes flip {
+  0% {
+    transform: scalex(1);
+  }
+
+  49% {
+    transform: scalex(1);
+  }
+
+  50% {
+    transform: scalex(-1);
+  }
+
+  99% {
+    transform: scalex(-1);
+  }
+  100% {
+    transform: scalex(-1);
+  }
+}
